@@ -1,24 +1,19 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
+import orderReducer from './reducers/orderReducer'
 import logger from 'redux-logger';
-import data from './orders.json';
+import data from './data/orders'
 
-function orderReducer(state = [], action) {
-  switch (action.type) {
-    case '@@ORDERS/ADD_ORDER': {
-      return [
-        ...state,
-        action.payload.order,
-      ] 
-    }
-    default: return state;
-  }
-}
+// chrome dev tools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
   combineReducers({
     orders: orderReducer,
   }),
-  applyMiddleware(logger),
-)
+  composeEnhancers(
+    applyMiddleware(logger)
+  )
+);
 
 /* mock of realtime action */
 let timerId = null;
@@ -28,7 +23,7 @@ function getRandom(min = 1, max = 10) {
   let result = Math.random();
   result = result * (max - min + 1) + min;
   result = Math.floor(result);
-  return result * 1000;
+  return result * 100;
 }
 
 function startEvent(delay) {

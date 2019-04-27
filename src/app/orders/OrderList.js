@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 function OrderList(props) {
   return (
-    <div className="order-list-container">
+    <div className="OrderList-container">
       {
         props.orders.map(order => (
-          <div key={order._id}>
+          <div key={order._id} className="OrderList-element">
             {order._id}
           </div>
         ))
@@ -17,5 +17,6 @@ function OrderList(props) {
 
 const mapStateToProps = state => ({
   orders: state.orders
-})
+});
+
 export default connect(mapStateToProps)(OrderList);
