@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import orderReducer from './reducers/orderReducer'
+import utilsReducer from './reducers/utilsReducer'
 import logger from 'redux-logger';
 import data from './data/orders'
 
@@ -9,6 +10,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   combineReducers({
     orders: orderReducer,
+    utils: utilsReducer
   }),
   composeEnhancers(
     applyMiddleware(logger)
