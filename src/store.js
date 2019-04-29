@@ -25,7 +25,7 @@ function getRandom(min = 1, max = 10) {
   let result = Math.random();
   result = result * (max - min + 1) + min;
   result = Math.floor(result);
-  return result * 1;
+  return result * 1000;
 }
 
 function startEvent(delay) {

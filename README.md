@@ -1,23 +1,26 @@
-# Frubana Frontend - test
+# Frubana Frontend
 
-prueba para desarrollador frontend de frubana.
+Prueba para desarrollador frontend de frubana.  
+Realizada por @jonathanjumper
 
 ### Requisitos
 * nodejs
-* yarn o npm
+* npm
 
-### iniciar el proyecto
-* clonar el repositorio:
+### Iniciar el proyecto
+* Clonar el repositorio:
 
   ``` bash
-  $ git clone https://github.com/Frubana/bodega_cachubana.git
+  $ git clone https://github.com/JonathanJumper/cachubana
   ```
-* instalar dependencias
+* Instalar dependencias
   ``` bash
-  $ cd carpeta-del-proyecto
-  $ yarn install
+  $ cd cachubana
+  $ npm install
   ```
-* iniciar el servidor
+* Iniciar
   ``` bash
-  $ yarn start
+  $ npm start
   ```
+
+Se desplegara la aplicacion en modo desarrollo en http://localhost:3000/
