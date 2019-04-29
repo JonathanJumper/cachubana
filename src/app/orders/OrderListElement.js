@@ -14,7 +14,8 @@ function OrderListElement(props) {
   const orderReady = order.productsMeta.readyCount === order.productsMeta.totalCount;
 
   function handleClick(){
-    props.history.push('/staff/orders/'+order._id);
+    if (props.location.pathname.includes('staff'))
+      props.history.push('/staff/orders/'+order._id);
   }
 
   return (

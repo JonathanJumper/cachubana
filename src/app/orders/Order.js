@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-import back from '../../assets/left-arrow.svg'
+import back from '../../assets/arrow_left.svg'
 
 import OrderListElement from './OrderListElement';
 import ProductList from '../products/ProductList';
@@ -17,7 +17,7 @@ function Order(props) {
   return (
     <div className='Order-container'>
 
-      <div onClick={handleBack} >
+      <div onClick={handleBack} className='my1' >
         <img src={back} alt="back" className='icon-button' />
       </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import OrderListElement from './OrderListElement'
 
-function OrderList(props) {
+function OrderListStaff(props) {
   return (
     <div className="OrderList-container">
       {
@@ -18,4 +18,4 @@ const mapStateToProps = state => ({
   orders: state.orders
 });
 
-export default connect(mapStateToProps)(OrderList);
+export default connect(mapStateToProps)(OrderListStaff);

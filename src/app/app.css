@@ -49,11 +49,44 @@ header .right {
   align-items: center;
 }
 
-.icon-button{
+input {
+  border: none;
+  font-size: 0.95em;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+input.large {
+  width: 320px;
+}
+
+.icon {
+  height: 15px;
+}
+
+.icon-button {
   height: 15px;
   cursor: pointer;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.ml1 {
+  margin-left: 10px;
+}
+
+.my1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mr3 {
+  margin-right: 30px;
+}
+
+/* - - - - - - - - - - - - - - - - - - App - - - - - - - - - - - -  */
 
 .App-container {
   min-height: 100vh;
@@ -63,6 +96,36 @@ header .right {
 
 .App-subcontainer {
   padding: 10px 8%;
+}
+
+.list-element {
+  display: flex;
+  align-items: center;
+}
+
+/* - - - - - - - - - - - - - - - - - - Admin - - - - - - - - - - - -  */
+
+.AdminHeader-container {
+  border-radius: 5px;
+  background-color: #ffd85e;
+  padding: 5px 15px;
+  font-size: 1em;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AdminHeader-container .left{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.AdminHeader-container .right{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* - - - - - - - - - - - - - - - - - - Orders - - - - - - - - - - - -  */
@@ -89,19 +152,13 @@ header .right {
   background-color: #e6f7ed;
 }
 
-.OrderListElement-element {
-  display: flex;
-  align-items: center;
-}
-
-.OrderListElement-icon {
-  height: 15px;
-}
-
 .Order-container {
   display: flex;
   flex-direction: column;
 }
+
+
+/* - - - - - - - - - - - - - - - - - - Products - - - - - - - - - - - -  */
 
 .ProductListElement {
   margin: 10px 0;

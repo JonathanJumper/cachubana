@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function({price, quantity}) {
   return (
-    <div className='OrderListElement-element'>
+    <div className='list-element'>
       $ {price} x {quantity}
     </div>
   )

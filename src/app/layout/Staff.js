@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import OrdersList from '../orders/OrderList';
+import OrdersList from '../orders/OrderListStaff';
 import Order from '../orders/Order';
 
 export default function() {

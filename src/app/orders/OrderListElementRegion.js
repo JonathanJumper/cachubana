@@ -1,10 +1,11 @@
 import React from 'react';
+import area from '../../assets/area.svg'
 
 export default function({region}) {
   return (
-    <div className='OrderListElement-element'>
-      <span> Reg: </span>
-      <span style={{marginLeft: '10px'}}> {region} </span>
+    <div className='list-element'>
+      <img src={area} alt="area" className='icon' />
+      <span className='ml1'> {region} </span>
     </div>
   )
 }

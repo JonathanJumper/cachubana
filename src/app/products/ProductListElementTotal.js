@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function({total}) {
   return (
-    <div className='OrderListElement-element'>
+    <div className='list-element'>
       Total:
-      <span style={{marginLeft: '10px'}}> $ {total} </span>
+      <span className='ml1'> $ {total} </span>
     </div>
   )
 }

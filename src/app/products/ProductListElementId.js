@@ -3,9 +3,9 @@ import key from '../../assets/key.svg'
 
 export default function({id}) {
   return (
-    <div className='OrderListElement-element'>
-      <img src={key} alt="key" className='OrderListElement-icon' />
-      <span style={{marginLeft: '10px'}}> {id} </span>
+    <div className='list-element'>
+      <img src={key} alt="key" className='icon' />
+      <span className='ml1'> {id} </span>
     </div>
   )
 }
