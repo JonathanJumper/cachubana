@@ -1,11 +1,11 @@
 import React from 'react';
 import product from '../../assets/product.svg'
 
-export default function({meta}) {
+export default function({name}) {
   return (
     <div className='OrderListElement-element'>
       <img src={product} alt="product" className='OrderListElement-icon' />
-      <span style={{marginLeft: '10px'}}> {meta.totalCount} - {(meta.readyCount * 100 / meta.totalCount).toFixed(2)}% Listo </span>
+      <span style={{marginLeft: '10px'}}> {name} </span>
     </div>
   )
 }

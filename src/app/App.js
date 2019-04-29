@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
+
+import Header from './layout/Header'
+import Staff from './layout/Staff'
+import Admin from './layout/Admin'
+
 import store from '../store';
-import OrdersList from './orders/OrderList';
-import logo from '../assets/logo.svg';
+
 
 import './app.css';
 
@@ -10,17 +15,23 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className='App-container'>
+        <Router>
 
-          <header>
-            <img src={logo} alt="Logo" />
-          </header>
+          <div className='App-container'>
 
-          <div className='App-subcontainer'>
-            <OrdersList />
+            <Header/>
+
+            <div className='App-subcontainer'>
+
+              <Route path="/admin" component={Admin} />
+
+              <Route path="/staff" component={Staff} />
+
+            </div>
+
           </div>
 
-        </div>
+        </Router>
       </Provider>
     );
   }
